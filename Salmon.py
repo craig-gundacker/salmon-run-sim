@@ -7,8 +7,8 @@ class Salmon:
         self.turtle = turtle.Turtle()
         self.turtle.speed(0)
         self.turtle.up()
-        #self.turtle.shape("fish.gif")
-        self.turtle.turtlesize(.5,.5,.5)
+        self.turtle.shape("fish.gif")
+        self.turtle.turtlesize(.2, .2, .2)
         self.turtle.color("blue")
 
         self.xPos = 0
