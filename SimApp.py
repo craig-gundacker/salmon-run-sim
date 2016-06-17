@@ -76,6 +76,7 @@ def addBears(coast, numBears):
             y = random.randrange(coast.maxY)
         coast.addThing(newBear, x, y)
     coast.numBears = numBears
+    coast.numAliveBears = numBears
 
 # At constant interval, calls the method to monitor the salmon population health
 def surveyPopulation(coast, cycleCounter):

@@ -13,6 +13,7 @@ class Coast:
         self.grid = []
 
         self.numBears = 0
+        self.numAliveBears = 0
         self.numCubs = 0
         self.numStartSalmon = 0
         self.numLivingSalmon = 0
@@ -22,6 +23,8 @@ class Coast:
         self.VIRUS_MORTALITY_RATE = .3
         self.REMOVE_BOAT_THRESHOLD = .6
         self.TARGET_SPAWN_RATE = .3
+        self.CUB_SURVIVAL_RATE = .4
+        self.ADULT_SURVIVAL_RATE = .9
 
         for aRow in range(self.maxY):
             row = []
@@ -181,7 +184,7 @@ class Coast:
         return self.grid[y][x]
 
     def decBears(self):
-        self.numBears -= 1
+        self.numAliveBears -= 1
         print("Bear Died")
 
     def decSalmon(self):
@@ -210,6 +213,7 @@ class Coast:
         print("Number of surviving bears: " + str(self.numBears))
         print("Expected bear cubs: " + str(self.numCubs))
         print(self.isHarvestSustainable())
+        print(self.isBearPopHealthy())
 
     # Returns a string representing whether or not the harvest is sustainable
     def isHarvestSustainable(self):
@@ -219,3 +223,15 @@ class Coast:
         else:
             return "Unsustainable harvest"
 
+    def isBearPopHealthy(self):
+        numSurviveCubs = self.numCubs * self.CUB_SURVIVAL_RATE
+        numSurviveAdults = self.numAliveBears * self.ADULT_SURVIVAL_RATE
+        numSurviveTotal = numSurviveCubs + numSurviveAdults
+        print(numSurviveCubs)
+        print(numSurviveAdults)
+        if numSurviveTotal < self.numBears:
+            return "Bear Population Decreasing"
+        elif numSurviveTotal == self.numBears:
+            return "Bear Population Remaining Steady"
+        else:
+            return "Bear Population Increasing"
