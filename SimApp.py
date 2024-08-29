@@ -53,7 +53,7 @@ def addSalmon(coast, numSalmon):
 
 
 def addBoats(coast, numBoats):
-    boatRangeY = int(coast.maxX/2 + random.randrange(coast.maxX/5))
+    boatRangeY = coast.maxX/2 + random.randrange(int(coast.maxX/5))
     for i in range(numBoats):
         newBoat = Boat()
         x = boatRangeY

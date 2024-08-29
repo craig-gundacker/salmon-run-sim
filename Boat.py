@@ -7,7 +7,7 @@ class Boat:
         self.turtle = turtle.Turtle()
         self.turtle.speed(0)
         self.turtle.up()
-        self.turtle.shape("fishingboat.gif")
+        #self.turtle.shape('square')
         self.turtle.turtlesize(1, 1, 1)
         self.turtle.color("red")
 

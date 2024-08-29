@@ -8,7 +8,7 @@ class Bear:
         self.turtle = turtle.Turtle()
         self.turtle.speed(0)
         self.turtle.up()
-        self.turtle.shape("bear.gif")
+        #self.turtle.shape('circle')
         self.turtle.turtlesize(.5, .5, .5)
         self.turtle.color("brown")
 
