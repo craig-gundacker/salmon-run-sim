@@ -79,6 +79,8 @@ class Coast:
 
     # Adds salmon, boat, or bear
     def addThing(self, thing, x, y):
+        x = int (x)
+        y = int (y)
         thing.setX(x)
         thing.setY(y)
         self.grid[y][x] = thing
@@ -175,6 +177,8 @@ class Coast:
             self.monitorSalmonPopulation()
             
     def emptyLocation(self, x, y):
+        x = int (x)
+        y = int (y)
         if self.grid[y][x] is None:
             return True
         else:
