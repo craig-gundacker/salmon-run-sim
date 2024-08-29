@@ -36,9 +36,9 @@ class Coast:
         self.pen.speed(0)
         self.screen = turtle.Screen()
         self.screen.setworldcoordinates(0, 0, (self.maxX - 1), (self.maxY - 1))
-        #self.screen.addshape('arrow')
-        #self.screen.addshape('square')
-        #self.screen.addshape('circle')
+        self.screen.addshape("bear.gif")
+        self.screen.addshape("boat.gif")
+        self.screen.addshape("salmon.gif")
         self.pen.hideturtle()
 
     # Draws the coast
