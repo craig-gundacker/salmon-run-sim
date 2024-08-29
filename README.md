@@ -15,16 +15,17 @@ This program is loosely based on a simulation written by the authors of [Python 
 
 ## Installation
 
-1. **Clone the repository:**
-
-   Open Git CMD or your terminal and run:
-   ```bash
-   git clone https://github.com/craig-gundacker/salmon-run-sim
-   ```
-
-2. **Navigate to the project directory:**
+1. **Navigate to the project directory:**
+   
+   Open Git CMD or your terminal and navigate to the directory where you want to clone the repository:  
    ```bash
    cd repository
+   ```
+2. **Clone the repository:**
+
+   Then run:
+   ```bash
+   git clone https://github.com/craig-gundacker/salmon-run-sim
    ```
 
 ## Running the Application
@@ -45,7 +46,7 @@ The application initializes a coast with a specified width and height, then popu
 
 - **Configuration:** You can adjust parameters like the number of salmon, boats, and bears by modifying the respective variables in `SimApp.py`.
 
-- **Dependencies:** Ensure that all dependencies (`Coast`, `Salmon`, `Bear`, `Boat`) are correctly implemented and accessible within your project directory.
+- **Dependencies:** Ensure that all dependencies —`Coast`, `Salmon`, `Bear`, `Boat`—are correctly implemented and accessible within your project directory.
 
 
 
