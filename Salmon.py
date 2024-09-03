@@ -1,5 +1,6 @@
 import turtle
 import random
+import os
 from Coast import*
 
 class Salmon:
@@ -7,7 +8,8 @@ class Salmon:
         self.turtle = turtle.Turtle()
         self.turtle.speed(0)
         self.turtle.up()
-        self.turtle.shape("salmon.gif")
+        workingDirectory = os.getcwd()
+        self.turtle.shape(os.path.join(workingDirectory, 'imgs', 'salmon.gif'))
         self.turtle.shapesize(.1, .1, .1)
         self.turtle.turtlesize(.5, .5, .5)
         self.turtle.color("blue")

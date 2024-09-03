@@ -1,5 +1,6 @@
 import turtle
 import random
+import os
 from Salmon import*
 
 # Represents a bear in the simulation
@@ -8,7 +9,8 @@ class Bear:
         self.turtle = turtle.Turtle()
         self.turtle.speed(0)
         self.turtle.up()
-        self.turtle.shape("bear.gif")
+        workingDirectory = os.getcwd()
+        self.turtle.shape(os.path.join(workingDirectory, 'imgs', 'bear.gif'))
         self.turtle.shapesize(.1, .1, .1)
         #self.turtle.turtlesize(.5, .5, .5)
         self.turtle.color("brown")

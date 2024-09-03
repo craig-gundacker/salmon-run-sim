@@ -1,5 +1,6 @@
 import turtle
 import random
+import os
 from Salmon import*
 from Boat import*
 from Bear import*
@@ -36,9 +37,10 @@ class Coast:
         self.pen.speed(0)
         self.screen = turtle.Screen()
         self.screen.setworldcoordinates(0, 0, (self.maxX - 1), (self.maxY - 1))
-        self.screen.addshape("bear.gif")
-        self.screen.addshape("boat.gif")
-        self.screen.addshape("salmon.gif")
+        workingDirectory = os.getcwd()
+        self.screen.addshape(os.path.join(workingDirectory, 'imgs', 'bear.gif'))
+        self.screen.addshape(os.path.join(workingDirectory, 'imgs', 'boat.gif'))
+        self.screen.addshape(os.path.join(workingDirectory, 'imgs', 'salmon.gif'))
         self.pen.hideturtle()
 
     # Draws the coast
