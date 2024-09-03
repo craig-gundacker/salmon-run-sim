@@ -214,8 +214,8 @@ class Coast:
         return self.numBoats
 
     def displayResults(self):
-        print("\nNumber of fish (start): " + str(self.numStartSalmon))
-        print("Number of fish (spawned): " + str(self.numSpawnSalmon))
+        print("\nNumber of fish at start of run: " + str(self.numStartSalmon))
+        print("Number of fish spawned during run: " + str(self.numSpawnSalmon))
         print("Number of surviving bears: " + str(self.numBears))
         print("Expected bear cubs: " + str(self.numCubs))
         print(self.isHarvestSustainable())
@@ -233,8 +233,8 @@ class Coast:
         numSurviveCubs = self.numCubs * self.CUB_SURVIVAL_RATE
         numSurviveAdults = self.numAliveBears * self.ADULT_SURVIVAL_RATE
         numSurviveTotal = numSurviveCubs + numSurviveAdults
-        print(numSurviveCubs)
-        print(numSurviveAdults)
+        print("Number of surviving bear cubs: " + str(numSurviveCubs))
+        print("Number of surviving adult bears: " + str(numSurviveAdults))
         if numSurviveTotal < self.numBears:
             return "Bear Population Decreasing"
         elif numSurviveTotal == self.numBears:

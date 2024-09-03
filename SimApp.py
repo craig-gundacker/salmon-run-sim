@@ -20,7 +20,6 @@ def entryMethod():
     addSalmon(coast, NUM_SALMON)
     addBoats(coast, NUM_BOATS)
     addBears(coast, NUM_BEARS)
-    print(os.getcwd())
     runSim(coast)
 
 # The while loops continues until the number of salmon is
