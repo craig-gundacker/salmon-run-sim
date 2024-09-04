@@ -13,7 +13,7 @@ MONITOR_INTERVAL = 1000
 
 # The driver application for the simulation.  Adds the salmon, boats,
 # and bears.  Calls runSim
-def entryMethod():
+def start():
     coast = Coast(COAST_WIDTH, COAST_HEIGHT)
     coast.draw()
 
@@ -82,5 +82,5 @@ def surveyPopulation(coast, cycleCounter):
     if cycleCounter % MONITOR_INTERVAL == 0:
         coast.monitorSalmonPopulation()
 
-entryMethod()
+start()
 
